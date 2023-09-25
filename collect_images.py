@@ -3,7 +3,7 @@ import os
 import cv2
 
 
-DATA_DIR = '/Users/akhil/Projects/IndianSignLanguage/25-09-23/images_alphabets'
+DATA_DIR = 'images_alphabets'
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
