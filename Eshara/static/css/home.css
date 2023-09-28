@@ -44,12 +44,18 @@ body{
     border-radius: 2rem;
     font-weight: 600;
     background-color: var(--pink);
-    color: white;
     margin-right: 2rem;
+    color: white;
 }
-
+.btn-try a{
+    text-decoration: none;
+    color: white;
+}
 .btn-about{
     background-color: var(--light-grey);
+    color: var(--dark-blue);
+}
+.btn-about a{
     color: var(--dark-blue);
 }
 .steps-title{
