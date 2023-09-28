@@ -7,19 +7,21 @@
     
     <link rel="stylesheet" href="../static/css/converter.css" >
     <link rel="stylesheet" href="../static/css/header.css" >
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-    $(document).ready(function(){
-        setInterval(function(){
-            $.getJSON('{{ url_for("get_characters") }}', function(data) {
-                $('#text-display').text(data);
+        function stopCamera() {
+            $.ajax({
+                type: "POST",
+                url: "/stop_camera",
+                success: function(response) {
+                    // Handle success and update the content of the div
+                    $("#text-display").text(response.output_string);
+                }
             });
-        }, 1000);  // Adjust the interval as needed.
-    });
+        }
     </script>
 </head>
 <body>
-    <!-- HEADER -->
     <div class="header">
         <img class="logo" src="../static/images/Logo.png" alt="" />
         <div class="nav-item"><a href="{{ url_for('home') }}">Home</a></div>
@@ -29,14 +31,9 @@
         <button class="btn-login"><a href="">Log In</a></button>
         <button class="btn-login btn-signup"><a href="">Sign Up</a></button>
     </div>
-    <!-- HEADER FINISH -->
-
-
-
-    <!-- CONVERTER -->
     <div class="converter">
         <div class="left-side">
-            <button class="button"><a href=""><i class="fa-solid fa-camera"></i>Turn on Camera</a></button>
+            <button class="button" onclick="stopCamera()"><a href="{{ url_for('stop_camera') }}"><i class="fa-solid fa-camera"></i>Generate</a></button>
             <label>Hold your sign for 1 seconds</label>
             <input type="range" min="1" max="5" > <!-- value-->
             <div class="video-display">
@@ -48,12 +45,12 @@
                 <audio src="" type="audio/mpeg" controls></audio>
                 <button class="button"><a href="">Female <i class="fa-solid fa-microphone"></i></a></button>
             </div>
-            <div class="text-display">
+            <div class="text-display" id="text-display">
+                
             </div>
         </div>
     </div>
     <!-- CONVERTER FINISH -->
-
     <script src="https://kit.fontawesome.com/133845b97a.js" crossorigin="anonymous"></script>
 </body>
 </html>
