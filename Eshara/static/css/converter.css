@@ -39,8 +39,8 @@ body{
 }
 .video-display{
     margin: 2rem 0 0 1rem;
-    width: 95%;
-    height: 70vh;
+    width: fit-content;
+    height: fit-content;
     background-color: black;
 }
 .right-side{

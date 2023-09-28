@@ -29,14 +29,17 @@
             <button class="button"><a href=""><i class="fa-solid fa-camera"></i>Turn on Camera</a></button>
             <label>Hold your sign for 1 seconds</label>
             <input type="range" min="1" max="5" > <!-- value-->
-            <div class="video-display"></div>
+            <div class="video-display">
+                <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+            </div>
         </div>
         <div class="right-side">
             <div class="audio-mod">
                 <audio src="" type="audio/mpeg" controls></audio>
                 <button class="button"><a href="">Female <i class="fa-solid fa-microphone"></i></a></button>
             </div>
-            <div class="text-display"></div>
+            <div class="text-display">
+            </div>
         </div>
     </div>
     <!-- CONVERTER FINISH -->
