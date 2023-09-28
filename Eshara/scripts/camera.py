@@ -1,6 +1,10 @@
 import cv2
+import sys
 def gen_frames():  
-    video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    if sys.platform == "darwin":
+        video = cv2.VideoCapture(0)
+    else:
+        video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     while True:
         success, frame = video.read()  # read the camera frame
         if not success:
