@@ -1,7 +1,7 @@
 from flask import Flask, Response, render_template
 
 app = Flask(__name__)
-@app.route('/convert')
+@app.route('/converter')
 def test():
     return render_template('converter.html')
 

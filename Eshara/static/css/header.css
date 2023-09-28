@@ -32,3 +32,12 @@
     background-color: var(--pink);
     color: white;
 }
+.btn-login a{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+.btn-signup a{
+    text-decoration: none;
+    color: white;
+
+}
