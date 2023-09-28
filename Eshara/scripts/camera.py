@@ -125,8 +125,8 @@ def gen_frames():
                     last_x1, last_y1, last_x2, last_y2 = 0, 0, 0, 0
                     last_recognition_time = current_time
                     holding_position = False  # Reset the flag
-            ret, buffer = cv2.imencode('.jpg', img)
-            img = buffer.tobytes()
+            ret, buffer = cv2.imencode('.jpg', imgOutput)
+            imgOutput = buffer.tobytes()
             print(img)
             yield (b'--frame\r\n'
-                    b'Content-Type: image/jpeg\r\n\r\n' + img + b'\r\n')  # concat frame one by one and show result
+                    b'Content-Type: image/jpeg\r\n\r\n' + imgOutput + b'\r\n')  # concat frame one by one and show result
