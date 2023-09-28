@@ -1,4 +1,4 @@
-body{
+html, body{
     margin: 0;
     padding: 0;
     --light-grey: #EBEBEB;
@@ -6,6 +6,7 @@ body{
     --dark-blue: #08087C;
     --audio-linear-grad: linear-gradient(#4339d1, rgb(31, 21, 77));
     background-image: url(../images/background-2.png);
+    overflow-x: hidden;
 }
 
 .converter{

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-body{
+html, body{
     margin: 0;
     padding: 0;
     --light-grey: #EBEBEB;
@@ -8,6 +8,7 @@ body{
     --dark-blue: #08087C;
     --step-linear-grad: linear-gradient(#080083, black);
     font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
 }
 .home-container{
     background-color: black;
