@@ -124,9 +124,9 @@ def process_frames():
                 last_x1, last_y1, last_x2, last_y2 = 0, 0, 0, 0
                 last_recognition_time = current_time
                 holding_position = False  # Reset the flag
-        # d = {"key": predicted_characters}
-        # with open('/Users/thushara/Documents/Thushara/SMIT/PROJECTS/Akhil/Final_Model/predicted_characters.json', 'w') as json_file:
-        #     json.dump(d, json_file)
+        d = {"key": predicted_characters}
+        with open('/Users/thushara/Documents/Thushara/SMIT/PROJECTS/Akhil/Final_Model/predicted_characters.json', 'w') as json_file:
+            json.dump(d, json_file)
         cv2.imshow("Image", imgOutput)
         cv2.waitKey(1)
 

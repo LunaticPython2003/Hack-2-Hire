@@ -6,7 +6,10 @@ import numpy as np
 import math
 import time
 
+predicted_characters = None
+
 def gen_frames():  
+    global predicted_characters
     if sys.platform == "darwin":
         cap = cv2.VideoCapture(0)
     else:
@@ -129,3 +132,5 @@ def gen_frames():
         imgOutput = buffer.tobytes()
         yield (b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + imgOutput + b'\r\n')  # concat frame one by one and show result
+        print(predicted_characters)
+        

@@ -7,6 +7,16 @@
     
     <link rel="stylesheet" href="../static/css/converter.css" >
     <link rel="stylesheet" href="../static/css/header.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        setInterval(function(){
+            $.getJSON('{{ url_for("get_characters") }}', function(data) {
+                $('#text-display').text(data);
+            });
+        }, 1000);  // Adjust the interval as needed.
+    });
+    </script>
 </head>
 <body>
     <!-- HEADER -->
