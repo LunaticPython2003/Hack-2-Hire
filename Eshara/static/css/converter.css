@@ -9,8 +9,8 @@ body{
 }
 
 .converter{
-    width: 100%;
     display: flex;
+    justify-content: center;
 }
 .button{
     border: none;
@@ -24,6 +24,7 @@ body{
 .button i{
     position: absolute;
     left: 1rem;
+    top: 1rem;
     font-size: 2rem;
 }
 
@@ -32,19 +33,17 @@ body{
     color: white;
 }
 .left-side{
-    width: 60%;
-    margin-left: 5rem;
     font-size: 1.3rem;
     color: white;
 }
 .video-display{
     margin: 2rem 0 0 1rem;
-    width: fit-content;
-    height: fit-content;
     background-color: black;
 }
+.video-cam{
+    width: 60vw;
+}
 .right-side{
-    width: 35%;
     margin-left: 1rem;
 }
 .audio-mod{
@@ -55,7 +54,7 @@ body{
 .text-display{
     background-color: rgba(255, 255, 255, 0.751);
     margin-top: 2.1rem;
-    width: 90%;
+    width: 30vw;
     height: 70vh;
 }
 
