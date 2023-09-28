@@ -26,6 +26,11 @@ body{
     left: 1rem;
     font-size: 2rem;
 }
+
+.button a{
+    text-decoration: none;
+    color: white;
+}
 .left-side{
     width: 60%;
     margin-left: 2rem;
