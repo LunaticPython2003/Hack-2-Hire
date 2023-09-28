@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.contacts{
+    background-image: linear-gradient(#080083,#05004f);
+    color: white;
+    padding: 2rem 10rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-title{
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.contact-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.fa-github{
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.contact-form-input{
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-bottom: 3px solid white;
+    width: 24rem;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.contact-form-submit{
+    background-color: transparent;
+    border: 5px solid white;
+    color: white;
+    padding: 0.7rem 1rem;
+    width:24rem;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+::-webkit-input-placeholder { 
+    color: white;
+}
