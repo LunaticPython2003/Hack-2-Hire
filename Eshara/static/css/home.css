@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    --light-grey: #EBEBEB;
+    --pink: #E42CAD;
+    --dark-blue: #08087C;
+    --step-linear-grad: linear-gradient(#080083, black);
+    font-family: 'Noto Sans', sans-serif;
+}
+.home-container{
+    background-color: black;
+    background-image: url('./background.png');
+    width: 100%;
+    background-size: cover;
+    padding-bottom: 12rem;
+}
+
+.intro{
+    margin-left: 7rem;
+}
+.title{
+    color: white;
+    font-size: 3.7rem;
+    margin-top: 4rem;
+}
+.indian{
+    color: var(--pink);
+}
+
+.description{
+    color: white;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+}
+.btns{
+    margin-top: 2rem;
+}
+.btn-try{
+    border: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    background-color: var(--pink);
+    color: white;
+    margin-right: 2rem;
+}
+
+.btn-about{
+    background-color: var(--light-grey);
+    color: var(--dark-blue);
+}
+.steps-title{
+    margin-left: 5rem;
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    width: fit-content;
+    height: fit-content;
+}
+.steps-title img{
+    height: 16rem;
+    margin-top: 5rem;
+    width: fit-content;
+}
+.steps-3{
+    position: relative;
+    padding-bottom: 26rem;
+}
+.step-img{
+    height: 18rem;
+}
+.right-step{
+    position: absolute;
+    right: 0;
+    top: 20rem;
+    background-image: var(--step-linear-grad);
+    width: 65vw;
+    padding: 1.3rem;
+    border-bottom-left-radius: 12rem;
+    border-top-left-radius: 12rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.step-text{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 10vw;
+}
+.left-step{
+    position: relative;
+    background-image: var(--step-linear-grad);
+    width: 65vw;
+    padding: 1.3rem;
+    border-bottom-right-radius: 12rem;
+    border-top-right-radius: 12rem;
+    color: white;
+    display: flex;
+    height: 18rem;
+    align-items: center;
+    margin-top: 20rem;
+}
+.recordimg{
+    position: absolute;
+    right: 1.3rem;
+}
+.right-step2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: var(--step-linear-grad);
+    width: 65vw;
+    padding: 1.3rem;
+    border-bottom-left-radius: 12rem;
+    border-top-left-radius: 12rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.three-images{
+    display: flex;
+    margin-top: 15rem;
+}
+.three-images img{
+    height: 21.1rem;
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.header{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+.logo{
+    height: 3.5rem;
+}
+.nav-item{
+    color: var(--light-grey);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.btn-login{
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: white;
+    color: var(--dark-blue);
+}
+.btn-signup{
+    background-color: var(--pink);
+    color: white;
+}
