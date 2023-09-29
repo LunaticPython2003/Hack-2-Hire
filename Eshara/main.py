@@ -1,6 +1,6 @@
 from flask import Flask, Response, render_template, jsonify
 import cv2
-from scripts.testing_sentences import return_text
+import scripts.testing_sentences as testing
 import sys
 from cvzone.HandTrackingModule import HandDetector
 from cvzone.ClassificationModule import Classifier
@@ -12,7 +12,7 @@ import json
 continue_camera_streaming = True
 
 def get_output_string():
-    output = return_text()
+    output = testing.ret_text()
     return output
 
 def gen_frames():  
@@ -170,7 +170,7 @@ def stop_camera():
     global continue_camera_streaming
     continue_camera_streaming=False
     print("Camera streaming stopped")
-    output_string = "Hello"
+    output_string = get_output_string()
     print(output_string)
     return jsonify(output_string=output_string), 200
 if __name__=="__main__":
