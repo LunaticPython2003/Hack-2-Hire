@@ -14,11 +14,13 @@
                 type: "POST",
                 url: "/stop_camera",
                 success: function(response) {
-                    // Handle success and update the content of the div
-                    $("#text-display").text(response.output_string);
+                    // Parse the JSON response and update the content of the div
+                    var jsonResponse = JSON.parse(response);
+                    $("#text-display").text(jsonResponse.output_string);
                 }
             });
         }
+
     </script>
 </head>
 <body>
@@ -33,7 +35,7 @@
     </div>
     <div class="converter">
         <div class="left-side">
-            <button class="button" onclick="stopCamera()"><a href="{{ url_for('stop_camera') }}"><i class="fa-solid fa-camera"></i>Generate</a></button>
+            <button class="button" onclick="stopCamera(event)"><a href="{{ url_for('stop_camera') }}"><i class="fa-solid fa-camera"></i>Generate</a></button>
             <label>Hold your sign for 1 seconds</label>
             <input type="range" min="1" max="5" > <!-- value-->
             <div class="video-display">

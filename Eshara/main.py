@@ -1,6 +1,6 @@
 from flask import Flask, Response, render_template, jsonify
 import cv2
-from scripts.testing_sentences import get_text
+from scripts.testing_sentences import return_text
 import sys
 from cvzone.HandTrackingModule import HandDetector
 from cvzone.ClassificationModule import Classifier
@@ -12,7 +12,7 @@ import json
 continue_camera_streaming = True
 
 def get_output_string():
-    output = get_text()
+    output = return_text()
     return output
 
 def gen_frames():  
@@ -141,12 +141,11 @@ def gen_frames():
         yield (b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + imgOutput + b'\r\n')  # concat frame one by one and show result
         d = {"key": predicted_characters}
-        print(predicted_characters)
         with open('predicted_characters.json', 'w') as json_file:
             json.dump(d, json_file)
     cap.release()
     cv2.destroyAllWindows()
-    print("Camera streaming stopped")
+    return "Hello"
 
 app = Flask(__name__)
 @app.route('/converter')
@@ -168,10 +167,11 @@ def get_characters():
 
 @app.route('/stop_camera')
 def stop_camera():
-    print("Hello")
     global continue_camera_streaming
     continue_camera_streaming=False
-    output_string = get_output_string()
-    return jsonify(output_string=output_string)
+    print("Camera streaming stopped")
+    output_string = "Hello"
+    print(output_string)
+    return jsonify(output_string=output_string), 200
 if __name__=="__main__":
     app.run(debug=True)
