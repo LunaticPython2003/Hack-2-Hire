@@ -165,7 +165,7 @@ def get_characters():
     print("Hello World")
 
 
-@app.route('/stop_camera')
+@app.route('/stop_camera', methods=['POST'])
 def stop_camera():
     global continue_camera_streaming
     continue_camera_streaming=False

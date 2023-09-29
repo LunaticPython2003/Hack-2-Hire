@@ -57,6 +57,7 @@ html, body{
     margin-top: 2.1rem;
     width: 30vw;
     height: 70vh;
+    padding: 1rem;
 }
 
 audio::-webkit-media-controls-panel{
