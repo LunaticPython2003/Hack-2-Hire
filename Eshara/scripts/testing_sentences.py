@@ -4,7 +4,25 @@ import language_tool_python
 import re
 ##processing of english statement
 # Read the JSON file
-def return_text():
+
+def remove_repetitions(text):
+    words = text.split()
+    unique_words = []
+    previous_word = None
+
+    for word in words:
+        if word != previous_word:
+            unique_words.append(word)
+        previous_word = word
+
+    return ' '.join(unique_words)
+
+def correct_grammar(text):
+        tool = language_tool_python.LanguageTool('en-US')
+        corrected_text = tool.correct(text)
+        return corrected_text
+
+def ret_text():
     with open("predicted_characters.json", "r") as json_file:
         data = json.load(json_file)
     input_sentence = data['key']
@@ -16,22 +34,7 @@ def return_text():
     #     corrected_text = ' '.join(corrected_words)
     #     return corrected_text
 
-    def remove_repetitions(text):
-        words = text.split()
-        unique_words = []
-        previous_word = None
-
-        for word in words:
-            if word != previous_word:
-                unique_words.append(word)
-            previous_word = word
-
-        return ' '.join(unique_words)
-
-    def correct_grammar(text):
-        tool = language_tool_python.LanguageTool('en-US')
-        corrected_text = tool.correct(text)
-        return corrected_text
+    
 
 
         # Correct spelling
@@ -43,6 +46,7 @@ def return_text():
         # Correct grammar
     final_text = correct_grammar(text_without_repetitions)
     return final_text
+
 
 ## generating audio
 # import torch
